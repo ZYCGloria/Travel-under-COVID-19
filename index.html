@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Aria is a business focused HTML landing page template built with Bootstrap to help you create lead generation websites for companies and their services.">
+    <meta name="author" content="Inovatik">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+    <meta property="og:site_name" content="" /> <!-- website name -->
+    <meta property="og:site" content="" /> <!-- website link -->
+    <meta property="og:title" content="" /> <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+    <meta property="og:type" content="article" />
+
+    <!-- Website Title -->
+    <title>Travel Under Covid-19</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext"
+        rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Favicon  -->
+    <link rel="icon" href="images/favicon.png">
+
+    <!-- amCharts Resources -->
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/geodata/worldLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/geodata/usaLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/plugins/timeline.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/plugins/bullets.js"></script>
+
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/material.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+    <!-- <script src="https://cdn.amcharts.com/lib/4/themes/spiritedaway.js"></script> -->
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/capacity.js"></script>
+    <script src="/javascripts/NumTravelChart.js"></script>
+    <script src="/javascripts/PlaceChart.js"></script>
+    <script src="/javascripts/makeAjaxCalls.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <style>
+        #tooltip {
+            position: absolute;
+            display: none;
+        }
+    </style>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    
+
+</head>
+
+<body data-spy="scroll" data-target=".fixed-top">
+
+    <!-- Preloader -->
+    <div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- end of preloader -->
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
+        <!-- Text Logo - Use this if you don't have a graphic logo -->
+        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
+
+        <!-- Image Logo -->
+        <!-- <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a> -->
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-awesome fas fa-bars"></span>
+            <span class="navbar-toggler-awesome fas fa-times"></span>
+        </button>
+        <!-- end of mobile menu toggle button -->
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#header">HOME <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#domestic">DOMESTIC</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#international">INTERNATIONAL</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#interview">INTERVIEW</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#survey">SURVEY</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#result">RESULT</a>
+                </li>
+        </div>
+    </nav> <!-- end of navbar -->
+    <!-- end of navbar -->
+
+
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-container">
+                            <h1>TRAVEL UNDER COVID-19 <br> </h1>
+                            <h2><span id="js-rotating">DOMESTIC, INTERNATIONAL, MORE...</span></h2>
+                            <p class="p-heading p-large">Concerns about COVID-19 infection, combined with the control
+                                measures of population movement,
+                                have hit the global travel and transport industry hard in a short time.
+                            </p>
+
+                            <p class="p-heading p-large">With the easing of the epidemic in China, domestic tourism is
+                                accelerating its recovery. However, the high death toll and severe situation abroad make
+                                international tourism
+                                still face great challenges.
+                            </p>
+                            <a class="btn-solid-lg page-scroll" href="#domestic">DISCOVER</a>
+                        </div>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of header-content -->
+    </header> <!-- end of header -->
+    <!-- end of header -->
+
+
+
+
+
+
+
+
+    <!-- Domestic part intro -->
+    <div id="domestic" class="basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="text-container">
+                        <div class="section-title">Domestic PART</div>
+                        <h2>Where will China's tourism industry go under the epidemic? </h2>
+                        <p>Though the suspension of tourism in February made practitioners panic,the boom trend only
+                            appears after the "Eleven Golden Week". </p>
+                        <p class="testimonial-text">The tourism indutry has experiencing quite a lot ups and downs in
+                            the year 2020. The lockdown of Wuhan, a central city makes Chinese hard to trvel, let along
+                            trvalling.</p>
+
+                        <p class="testimonial-text">However, the successful control of the virus makes the indutry see
+                            new hope in the second half year.</p>
+
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-6">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/domestic1.jpg" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of intro -->
+
+
+    <!-- Domestic Time line-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div id="chartdiv4" style="height:600px"></div>
+            </div>
+        </div>
+    </div>
+    <!-- end of Domestic timeline -->
+
+
+    <!-- Details 1 -->
+	<div id="details" class="accordion">
+		<div class="area-1" id="chartdiv5">
+            <br/>
+
+		</div><!-- end of area-1 on same line and no space between comments to eliminate margin white space --><div class="area-2">
+            
+            <!-- Accordion -->
+            <div class="accordion-container" id="accordionOne">
+              
+                <h2>Passenger Capacity Drops By More Than Half</h2>
+
+                <!-- Counter -->
+                <div id="counter" >
+                    <div class="cell">
+                        <div class="counter-value number-count" data-count="231">+4%</div>
+                        <div class="counter-info">Jan<br>13</div>
+                    </div>
+                    <div class="cell">
+                        <div class="counter-value number-count" data-count="121">+21%</div>
+                        <div class="counter-info">Jan<br>16</div>
+                    </div>
+                    <div class="cell">
+                        <div class="counter-value number-count" data-count="159">-87%</div>
+                        <div class="counter-info">Feb<br>04</div>
+                    </div>
+                </div>
+
+                <p>Passengers during the Spring Festival travel period compared to last year declined more than a half. Due to the natinal wide lockdown, this year's Spring Festival trvel passenger capacity was 1.48 billion passengers, a decrease of 50.3% over the same period last year.</p>
+                <ul class="list-unstyled li-space-lg">
+                    <li class="media">
+                        <i class="fas fa-square"></i>
+                        <div class="media-body">The main reason for cutting passager flow is the limit on social
+                            distancing.</div>
+                    </li>
+                    <li class="media">
+                        <i class="fas fa-square"></i>
+                        <div class="media-body">The return passenger flow of the Spring Festival this year was not concentrated</div>
+                    </li>
+                    <li class="media">
+                        <i class="fas fa-square"></i>
+                        <div class="media-body">The order of life in "low-risk" areas has been
+                            fully restored, and transportation has returned to normal.</div>
+                    </li>
+                </ul>
+
+                
+            </div> <!-- end of accordion-container -->
+            <!-- end of accordion -->
+            <br/>
+
+		</div> <!-- end of area-2 -->
+    </div> <!-- end of accordion -->
+    <!-- end of details 1 -->
+
+    <!--D3-->
+
+    <!-- Detail 2: mapChart -->
+    <!-- Details 2 -->
+	<div class="tabs">
+        <div class="area-1">
+            <div class="tabs-container">
+                
+                <!-- Tabs Links -->
+                <ul class="nav nav-tabs" id="ariaTabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="nav-tab-1" data-toggle="tab" role="tab" aria-controls="tab-1" aria-selected="true"><i class="fas fa-th"></i> Passenger Flows</a>
+                    </li>
+                </ul>
+                <!-- end of tabs links -->
+                
+                <!-- Tabs Content -->
+                <div class="tab-content" id="ariaTabsContent">
+
+                    <!-- Tab -->
+                    <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
+                        <p>To know better about the change of passenger capacity, here we elaborate the difference between 2020 and 2019.</p>
+                        <p>Here we show 5 days records in January.</p>
+
+                        <!-- Progress Bars -->
+                        <div class="progress-container">
+                            <div class="title">Drop rate in January 30th? 92% </div>
+                            <div class="progress">
+                                <div class="progress-bar first" role="progressbar" aria-valuenow="92" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                            <div class="title">Drop rate in January 28th? 77%</div>
+                            <div class="progress">
+                                <div class="progress-bar second" role="progressbar" aria-valuenow="77" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                            <div class="title">Drop rate in January 29th? 86%</div>
+                            <div class="progress">
+                                <div class="progress-bar third" role="progressbar" aria-valuenow="86" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>                        </div> <!-- end of progress-container -->
+                        <!-- end of progress bars -->
+                        
+                    </div> <!-- end of tab-pane --> 
+                    <!-- end of tab -->
+
+
+                </div> <!-- end of tab-content -->
+                <!-- end of tabs content -->
+
+            </div> <!-- end of tabs-container -->
+        </div><!-- end of area-1 on same line and no space between comments to eliminate margin white space --><div class="area-2" float="left"><br/><br/><br/><br/>            <div class="card" style="width: 18rem;" id="tooltip">
+            <div class="card-body">
+                <h5 class="card-title" id="title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted" id="subtitle">Card subtitle</h6>
+            </div>
+        </div>            <svg width="95%" height="480">
+            <text x="0" y="130" fill="#C1693C" font-size="1.1em">Capacity in 2020</text>
+    
+            <text x="0" y="250" fill="#C1693C" font-size="1.1em">Capacity in 2019</text>
+            <circle cx="150" cy="120" r="30" class="p3"></circle>
+            <circle cx="250" cy="120" r="30" class="p3"></circle>
+            <circle cx="350" cy="120" r="30" class="p3"></circle>
+            <circle cx="450" cy="120" r="30" class="p3"></circle>
+            <circle cx="550" cy="120" r="30" class="p3"></circle>
+
+
+            <circle cx="150" cy="240" r="30" class="p4"></circle>
+            <circle cx="250" cy="240" r="30" class="p4"></circle>
+            <circle cx="350" cy="240" r="30" class="p4"></circle>
+            <circle cx="450" cy="240" r="30" class="p4"></circle>
+            <circle cx="550" cy="240" r="30" class="p4"></circle>
+
+        </svg>
+
+        <script src="js/d33.js"></script>
+
+        <script src="js/d34.js"></script></div> <!-- end of area-2 -->
+    </div> <!-- end of tabs -->
+    <!-- end of details 2 -->
+
+
+
+
+
+ <!---------- Domestic Part End --------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+    
+    <!-- International -->
+    <div id="international" class="basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="text-container">
+                        <div class="section-title">INTERNATIONAL PART</div>
+                        <h2>International tourism dropped fiercely during the pendamic by 80% year on year</h2>
+                        <p>The number of vist aboard declined sharply due to the worldwide COVID-19. More than 70
+                            countries tightened the entrance limitation on China and 80% of international flights were
+                            cancelled.</p>
+                        <p class="testimonial-text">Compared with the boom of domestic tourism, the international
+                            travelling keeps floating at the bottom with 100000 vistors a day these months, which used
+                            to be 700000 in Spetember, 2019.</p>
+                        <div class="testimonial-author">TravelDaily report</div>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-7">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/international1.jpg" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of intro -->
+
+
+    <!-- Preview -->
+    <div class="cards-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <!-- Card -->
+                    <div class="card">
+                        <span class="fa-stack">
+                            <span class="hexagon"></span>
+                            <i class="fas fa-binoculars fa-stack-1x"></i>
+                        </span>
+                        <div class="card-body">
+                            <h4 class="card-title">Tightened Entry Restriction</h4>
+                            <p>Until March, more than 30 countries suspended visa processing and over 40 countries
+                                tightened the entry restriction on China.</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <span class="fa-stack">
+                            <span class="hexagon"></span>
+                            <i class="fas fa-list-alt fa-stack-1x"></i>
+                        </span>
+                        <div class="card-body">
+                            <h4 class="card-title">Suspended International lights</h4>
+                            <p>After the announcement of Further Reducing International Passenger Flights, international
+                                flights scheduled per day was cut by around 98% year on year.</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <span class="fa-stack">
+                            <span class="hexagon"></span>
+                            <i class="fas fa-chart-pie fa-stack-1x"></i>
+                        </span>
+                        <div class="card-body">
+                            <h4 class="card-title">Decreased Vists Aboard</h4>
+                            <p>According to the World Tourism Orginazition, the international tourism income might lose
+                                from 420 billion to 300 billion. As the largest tourists export country, China exported
+                                nearly 0 visitors recently, which was 155 million in total last year</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-1 -->
+    <!-- end of description -->
+
+
+
+
+
+    <!-- Details 1 -->
+	<div id="details" class="accordion">
+		<div class="area-1" id="chartdivm">
+            <br/>
+            <script src="js/drawMap.js" height="300px" margin="5px"></script>
+		</div><!-- end of area-1 on same line and no space between comments to eliminate margin white space --><div class="area-2">
+            
+<!-- Accordion -->
+<div class="accordion-container" id="accordionOne">
+    <h2>More than 70 countries hold a tight entry restriction on China</h2>
+    <div class="item">
+        <div id="headingOne">
+            <span data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                aria-controls="collapseOne" role="button">
+                <span class="circle-numbering">1</span><span class="accordion-title">180 countries
+                    established diplomatic ties with China</span>
+            </span>
+        </div>
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+            data-parent="#accordionOne">
+            <div class="accordion-body">
+                General speaking, there are more than 180 countries established friendly diplomatic
+                relationship with China.
+            </div>
+        </div>
+    </div> <!-- end of item -->
+
+    <div class="item">
+        <div id="headingTwo">
+            <span class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                aria-controls="collapseTwo" role="button">
+                <span class="circle-numbering">2</span><span class="accordion-title">Over 30 countries
+                    suspended visa process in China</span>
+            </span>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionOne">
+            <div class="accordion-body">
+                More than 30 dountries totally shut down the population float with China in order to reduce
+                the intersetive injection of coronavirus.
+            </div>
+        </div>
+    </div> <!-- end of item -->
+
+    <div class="item">
+        <div id="headingThree">
+            <span class="collapsed" data-toggle="collapse" data-target="#collapseThree"
+                aria-expanded="false" aria-controls="collapseThree" role="button">
+                <span class="circle-numbering">3</span><span class="accordion-title">More than 40 coutries
+                    hold the entry restrictoin tighter</span>
+            </span>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionOne">
+            <div class="accordion-body">
+                It is reported that over 70 countries all over the world constraint on the immigration
+                control to China during the COVID-19.
+            </div>
+        </div>
+    </div> <!-- end of item -->
+</div> <!-- end of accordion-container -->
+<!-- end of accordion -->
+
+		</div> <!-- end of area-2 -->
+    </div> <!-- end of accordion -->
+    <!-- end of details 1 -->
+
+
+
+    <!-- Detail 2: mapChart -->
+    <!-- Details 2 -->
+	<div class="tabs">
+        <div class="area-1">
+            <div class="tabs-container">
+                
+                <!-- Tabs Links -->
+                <ul class="nav nav-tabs" id="ariaTabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="nav-tab-1" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true"><i class="fas fa-th"></i> Expectations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="nav-tab-2" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false"><i class="fas fa-th"></i> Survey Sample</a>
+                    </li>
+                </ul>
+                <!-- end of tabs links -->
+                
+                <!-- Tabs Content -->
+                <div class="tab-content" id="ariaTabsContent">
+
+                    <!-- Tab -->
+                    <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
+                        <p>Here we use a #Guage Chart# to display public's expectation on international trips, because it shows the level and emotion of expectation obviously.</p>
+
+                        <!-- Progress Bars -->
+                        <div class="progress-container">
+                            <div class="title">The influence will last more than 4 months? 77% </div>
+                            <div class="progress">
+                                <div class="progress-bar first" role="progressbar" aria-valuenow="77" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                            <div class="title">More severe than SARS? 75%</div>
+                            <div class="progress">
+                                <div class="progress-bar second" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                            <div class="title">Expectation on international trip drops sharply? 90%</div>
+                            <div class="progress">
+                                <div class="progress-bar third" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>                        </div> <!-- end of progress-container -->
+                        <!-- end of progress bars -->
+                        
+                    </div> <!-- end of tab-pane --> 
+                    <!-- end of tab -->
+
+                    <!-- Tab -->
+                    <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2">
+                        <ul class="list-unstyled li-space-lg first">
+                            <li class="media">
+                                <div class="media-bullet">1</div>
+                                <div class="media-body"><strong>Central China</strong> contributes 34% to the survey
+                                    collection</div>
+                            </li>
+                            <li class="media">
+                                <div class="media-bullet">2</div>
+                                <div class="media-body"><strong>Esatern China</strong> contributes 24% to the survey
+                                    collection</div>
+                            </li>
+                            <li class="media">
+                                <div class="media-bullet">3</div>
+                                <div class="media-body"><strong>Western China</strong> contributes 5% to the survey
+                                    collection</div>
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled li-space-lg last">
+                            <li class="media">
+                                <div class="media-bullet">4</div>
+                                <div class="media-body"><strong>Southern China</strong> contributes 21% to the survey
+                                    collection</div>
+                            </li>
+                            <li class="media">
+                                <div class="media-bullet">5</div>
+                                <div class="media-body"><strong>Northern China</strong> contributes 16% to the survey
+                                    collection</div>
+                            </li>
+                            <li class="media">
+                                <div class="media-bullet">6</div>
+                                <div class="media-body"><strong>In total</strong> recieved 1058 responses from 28
+                                    provinces, among which there are 228 valid international trip surveys</div>
+                            </li>
+                        </ul>
+                    </div> <!-- end of tab-pane -->
+                    <!-- end of tab -->
+
+
+                </div> <!-- end of tab-content -->
+                <!-- end of tabs content -->
+
+            </div> <!-- end of tabs-container -->
+        </div><!-- end of area-1 on same line and no space between comments to eliminate margin white space --><div class="area-2" id="chartdivg"><script src="js/drawGaugeChart.js" height="300px"></script></div> <!-- end of area-2 -->
+    </div> <!-- end of tabs -->
+    <!-- end of details 2 -->
+
+<!-- About -->
+    <!-- Details 1 -->
+	<div id="details" class="accordion">
+		<div class="area-1" id="chartdivl">
+            <br/>
+            <script src="js/drawLineCharts.js" height="300px" margin="5px"></script>
+		</div><!-- end of area-1 on same line and no space between comments to eliminate margin white space --><div class="area-2">
+            
+            <!-- Accordion -->
+            <div class="accordion-container" id="accordionOne">
+                <h2>99% International Flights Cancelled After March</h2>
+
+                <!-- Counter -->
+                <div id="counter" >
+                    <div class="cell">
+                        <div class="counter-value number-count" data-count="231">17K</div>
+                        <div class="counter-info">Jan<br>01</div>
+                    </div>
+                    <div class="cell">
+                        <div class="counter-value number-count" data-count="121">6K</div>
+                        <div class="counter-info">Feb<br>10</div>
+                    </div>
+                    <div class="cell">
+                        <div class="counter-value number-count" data-count="159">2K</div>
+                        <div class="counter-info">Apr<br>10</div>
+                    </div>
+                </div>
+                
+                <p> The severity of the epidemic has made travel restrictions more stringent. 
+                    After March, the number of global flights plummeted, and airports were often empty.</p>
+                <ul class="list-unstyled li-space-lg">
+                    <li class="media">
+                        <i class="fas fa-square"></i>
+                        <div class="media-body">Daily passenger capacity will shrink to 1925 after the latest notes in March.</div>
+                    </li>
+                    <li class="media">
+                        <i class="fas fa-square"></i>
+                        <div class="media-body">SARS in 2003 impacted the international passenger capacity
+                            decreasing by 18.7%.</div>
+                    </li>
+                    <li class="media">
+                        <i class="fas fa-square"></i>
+                        <div class="media-body">The index may negatively grow to the lowest in record.</div>
+                    </li>
+                </ul>
+            </div> <!-- end of accordion-container -->
+            <!-- end of accordion -->    
+		</div> <!-- end of area-2 -->
+    </div> <!-- end of accordion -->
+    <!-- end of details 1 -->
+
+
+
+
+
+
+
+
+    <!-- Interviews -->
+    <div id = "interview" class="slider">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>Travel plans that have been delayed by the outbreak</h2>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12" style="height:80px">
+                        </div>
+                    </div>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <!-- Card Slider -->
+                    <div class="slider-container">
+                        <div class="swiper-container card-slider">
+                            <div class="swiper-wrapper">
+
+                                <!-- Slide -->
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <img class="card-image" src="images/testimonial-1.jpg" alt="alternative">
+                                        <div class="card-body">
+                                            <div class="testimonial-text">My husband and I had to extend our honeymoon
+                                                indefinitely because of the outbreak. In fact, we didn't make it to the
+                                                wedding...</div>
+                                            <div class="testimonial-author">Jude Thorn</div>
+                                        </div>
+                                    </div>
+                                </div> <!-- end of swiper-slide -->
+                                <!-- end of slide -->
+
+                                <!-- Slide -->
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <img class="card-image" src="images/testimonial-2.jpg" alt="alternative">
+                                        <div class="card-body">
+                                            <div class="testimonial-text">Every year I take at least a month off from
+                                                work to go on vacation to Hawaii with my family. This year I have to
+                                                work from home all the time... </div>
+                                            <div class="testimonial-author">Marsha Singer</div>
+                                        </div>
+                                    </div>
+                                </div> <!-- end of swiper-slide -->
+                                <!-- end of slide -->
+
+                                <!-- Slide -->
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <img class="card-image" src="images/testimonial-3.jpg" alt="alternative">
+                                        <div class="card-body">
+                                            <div class="testimonial-text">I had always been on business, and the
+                                                outbreak ended it all. But now I have
+                                                more time to spend with my family, which makes them very happy.</div>
+                                            <div class="testimonial-author">Roy Smith</div>
+                                        </div>
+                                    </div>
+                                </div> <!-- end of swiper-slide -->
+                                <!-- end of slide -->
+
+
+                                <!-- Slide -->
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <img class="card-image" src="images/testimonial-5.jpg" alt="alternative">
+                                        <div class="card-body">
+                                            <div class="testimonial-text">The epidemic has taken away my graduation
+                                                ceremony and my graduation trip with friends. I'm so sad
+                                                since it's hard to travel after work...</div>
+                                            <div class="testimonial-author">Lindsay Rune </div>
+                                        </div>
+                                    </div>
+                                </div> <!-- end of swiper-slide -->
+                                <!-- end of slide -->
+
+                                <!-- Slide -->
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <img class="card-image" src="images/testimonial-6.jpg" alt="alternative">
+                                        <div class="card-body">
+                                            <div class="testimonial-text">As a professional traveler, I hope more than
+                                                anyone that the epidemic will get better soon so that I can continue to
+                                                travel the world and write my blog.</div>
+                                            <div class="testimonial-author">Ann Black</div>
+                                        </div>
+                                    </div>
+                                </div> <!-- end of swiper-slide -->
+                                <!-- end of slide -->
+
+                            </div> <!-- end of swiper-wrapper -->
+
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <!-- end of add arrows -->
+
+                        </div> <!-- end of swiper-container -->
+                    </div> <!-- end of sliedr-container -->
+                    <!-- end of card slider -->
+
+                </div> <!-- end of col -->
+            </div>
+        </div> <!-- end of container -->
+    </div> <!-- end of slider -->
+    <!-- end of interviews -->
+
+    <!-- Call Me -->
+    <div id="survey" class="form-1">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <div class="text-container">
+                        <div class="section-title">SURVEY</div>
+                        <h2 class="white">Tell Us About Your Travel Plan</h2>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <!-- Call Me Form -->
+                    <form id="callMeForm" data-toggle="validator" data-focus="false" class="container1 col-md-6"
+                        style="margin:auto" action="/form" method="post" onsubmit="postWithAjax(this);return false;">
+                        <div class="form-group">
+                            <input type="text" class="form-control-input" id="lname" name="lname" required>
+                            <label class="label-control" for="lname">Name</label>
+
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" class="form-control-input" id="lemail" name="lemail" required>
+                            <label class="label-control" for="lemail">Email</label>
+
+                        </div>
+
+                        <div class="form-group">
+                            <select class="form-control-select" id="time" name="time" required>
+                                <option class="select-option" value="" disabled selected>How many times have you
+                                    traveled this year?</option>
+                                <option class="select-option" value="time1">None</option>
+                                <option class="select-option" value="time2">Once</option>
+                                <option class="select-option" value="time3">Twice</option>
+                                <option class="select-option" value="time4">Three</option>
+                                <option class="select-option" value="time5">More</option>
+                            </select>
+
+                        </div>
+
+                        <div class="form-group">
+                            <select class="form-control-select" id="place" name="place" required>
+                                <option class="select-option" value="" disabled selected>Where do you want to visit most
+                                    after the epidemic?</option>
+                                <option class="select-option" value="place1">Asia</option>
+                                <option class="select-option" value="place2">Europe</option>
+                                <option class="select-option" value="place3">America</option>
+                                <option class="select-option" value="place4">Africa</option>
+                                <option class="select-option" value="place5">Others</option>
+                            </select>
+
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="form-control-submit-button">SUBMIT</button>
+                        </div>
+                        <div class="form-message">
+                            <div id="lmsgSubmit" class="h3 text-center hidden"></div>
+                        </div>
+                    </form>
+                    <!-- end of call me form -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of form-1 -->
+    <!-- end of call me -->
+
+
+
+  
+
+
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-container about">
+                        <h4>About the authors</h4>
+                        <p class="white">We're student journalists from Hong Kong Baptist University. We collect raw
+                            data and process it, make it visualized, and finally present it to you.</p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->
+    <!-- end of footer -->
+
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small">Copyright © 2020 <a href="https://inovatik.com">Template by Inovatik</a></p>
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of copyright -->
+    <!-- end of copyright -->
+
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
+    <script src="js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
+    <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+</body>
+
+</html>
